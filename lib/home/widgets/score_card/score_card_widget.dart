@@ -20,10 +20,10 @@ class ScoreCardWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           boxShadow: [
             BoxShadow(
-                color: AppColors.lightGrey,
-                offset: Offset(5.0, 5.0),
+                color: Colors.grey,
+                offset: Offset(1, 1),
                 blurRadius: 10,
-                spreadRadius: 1)
+                spreadRadius: .5)
           ],
         ),
         child: Padding(
