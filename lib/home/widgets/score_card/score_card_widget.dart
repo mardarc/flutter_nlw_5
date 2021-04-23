@@ -2,6 +2,10 @@ import 'package:DevQuiz/home/widgets/chart/chart_widget.dart';
 import 'package:DevQuiz/core/core.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/app_colors.dart';
+import '../../../core/app_colors.dart';
+import '../../../core/core.dart';
+
 class ScoreCardWidget extends StatelessWidget {
   const ScoreCardWidget({Key? key}) : super(key: key);
 
@@ -12,9 +16,18 @@ class ScoreCardWidget extends StatelessWidget {
       child: Container(
         height: 136,
         decoration: BoxDecoration(
-            color: AppColors.white, borderRadius: BorderRadius.circular(15)),
+          color: AppColors.white,
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+                color: AppColors.lightGrey,
+                offset: Offset(5.0, 5.0),
+                blurRadius: 10,
+                spreadRadius: 1)
+          ],
+        ),
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
