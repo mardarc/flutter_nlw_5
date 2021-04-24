@@ -1,5 +1,6 @@
 import 'package:DevQuiz/home/widgets/chart/chart_widget.dart';
 import 'package:DevQuiz/core/core.dart';
+import 'package:DevQuiz/shared/models/user_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/app_colors.dart';
@@ -7,7 +8,8 @@ import '../../../core/app_colors.dart';
 import '../../../core/core.dart';
 
 class ScoreCardWidget extends StatelessWidget {
-  const ScoreCardWidget({Key? key}) : super(key: key);
+  final UserModel user;
+  const ScoreCardWidget({Key? key, required this.user}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,20 +20,18 @@ class ScoreCardWidget extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            BoxShadow(
-                color: Colors.grey,
-                offset: Offset(1, 1),
-                blurRadius: 10,
-                spreadRadius: .5)
-          ],
+          border: Border.fromBorderSide(
+            BorderSide(
+              color: AppColors.border,
+            ),
+          ),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(flex: 1, child: ChartWidget()),
+              Expanded(flex: 1, child: ChartWidget(user: user)),
               Expanded(
                 flex: 3,
                 child: Padding(

@@ -21,10 +21,9 @@
                     {"title":"Possibilita a criação de desktops que são muito incríveis"}
               ]
             }
-          ],
-          "imagem": "data",
-          "level": "facil",
-          "questioAnswered": 1
+        ],
+        "imagem": "data",
+        "level": "facil"
     },
     {
         "title": "Construindo Interfaces",
@@ -120,9 +119,8 @@
                     {"title":"Possibilita a criação de desktops que são muito incríveis"}
               ]
             }
-          ],
-          "imagem": "data",
-          "level": "facil",
-          "questioAnswered": 1
+        ],
+        "imagem": "laptop",
+        "level": "facil"
     }
 ]
