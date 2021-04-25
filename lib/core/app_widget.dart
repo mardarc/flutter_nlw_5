@@ -1,3 +1,4 @@
+import 'package:DevQuiz/challenge/answer_page.dart';
 import 'package:DevQuiz/challenge/challenge_page.dart';
 import 'package:DevQuiz/home/home_page.dart';
 import 'package:flutter/material.dart';
@@ -8,10 +9,14 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "DevQuiz",
-      home: HomePage(),
+      home: AnswerPage.wrong(),
     );
   }
 }
